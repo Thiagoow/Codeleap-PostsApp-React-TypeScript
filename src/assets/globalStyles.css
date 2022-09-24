@@ -1,58 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+  --first-color: #fff;
+  --second-color: #000;
+  --third-color: #333;
+  --dark-third-color: #ccc;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --wgt-bold: 700;
+  --body-font: 'Roboto', sans-serif;
+  --title-size: 1.375rem;
+  --txt-size: 1.125rem;
+  --normal-size: 1rem;
+  --small-size: 0.875rem;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+
+  --border-outside-radius: 30px;
+  --border-inside-radius: 10px;
 }
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
+/*========== CSS Reset ==========*/
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  color: var(--first-color);
+  text-decoration: none;
 }
-a:hover {
-  color: #535bf2;
+button {
+  cursor: pointer;
+  border: none;
 }
 
-body {
+/*========== Base Layout ==========*/
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+  padding: 0;
+  box-sizing: border-box;
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-family: var(--body-font);
+  font-size: var(--normal-size);
+}
+html {
+  scroll-behavior: smooth;
+}
+body,
+html {
+  background-color: var(--second-color);
+  color: var(--first-color);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #fff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #eee !important;
+    --first-color: #000;
+    --second-color: #fff;
+    --third-color: #ccc;
+    --dark-third-color: #333;
   }
 }
